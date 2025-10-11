@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Verónica</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header con menú hamburguesa -->
+    <!-- Header con menú hamburguesa -->
+    <header class="header">
+        <nav class="navegacion">
+            <div class="logo">Verónica</div>
+
+            <!-- BOTÓN HAMBURGUESA CORREGIDO -->
+            <button class="menu-hamburguesa" id="menuHamburguesa">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <div class="nav-enlaces" id="navEnlaces">
+                <a href="#inicio">Inicio</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#formacion">Formación</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Seccion de main.
+        Esta seccion literalmente es una seccion, no cuenta como "body" 
+    -->
+    <main class="presentacion" id="inicio">
+        <section class="presentacion__contenido">
+            <!--<h1 class="presentacion__contenido__titulo">
+                <strong> > Hello, word!</strong>
+            </h1>-->
+            <h1 class="presentacion__contenido__titulo">
+                <strong>> Hello, word!</strong> Soy Verónica <br>
+                <strong class="titulo-destaque">
+                    De la lógica a la interfaz: desarrollo con propósito.
+                </strong>
+            </h1>
+
+            <p class="presentacion__contenido__texto">
+                <strong>Ingeniera de sistemas</strong> trazando mi ruta en el desarrollo móvil con <strong
+                    class="titulo-destaque"> Flutter.</strong> <br>
+                Construyo experiencias digitales línea a línea, combinando mi base en lógica con
+                la creatividad del desarrollo móvil.
+            </p>
+            <p class="presentacion__contenido__texto_2">
+                Cuando no estoy transformando ideas en código, encuentro mi ritmo practicando guitarra, explorando el
+                balance perfecto entre la estructura y la armonía.
+            </p>
+            <p class="presentacion__contenido__texto">
+                <strong class="titulo-destaque">¿Creamos algo juntos?</strong>
+            </p>
+
+            <div class="presentacion__enlaces">
+                <a class="presentacion__enlaces_link" href="https://github.com/V-ac">
+                    <img src="./asset/github.png" alt=""> GitHub
+                </a>
+                <a class="presentacion__enlaces_link" href="https://linkedin.com/in/verónica-acuña">
+                    <img src="./asset/linkedin.png" alt=""> LinkedIn
+                </a>
+
+                <a class="presentacion__enlaces_link" href="">
+                    CV
+                </a>
+
+            </div>
+        </section>
+        <img class="fotoVero" src="./asset/imagen.JPG" alt="Foto de presentación de Verónica Acuña">
+    </main>
+
+    <section id="proyectos" class="seccion">
+        <h2 class="proyectos-titulo">Proyectos Destacados</h2>
+        <p class="proyectos-subtitulo">
+            Una muestra de mi trabajo más reciente
+        </p>
+
+        <div class="proyectos-grid">
+            <!-- Los proyectos se cargan automáticamente desde JavaScript -->
+        </div>
+
+        <div class="proyectos-accion">
+            <a href="proyectos.html" class="btn-proyectos">
+                <span class="btn-texto">Ver todos los proyectos</span>
+                <span class="btn-icono">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Sección Formación & Certificaciones -->
+    <section id="formacion" class="formacion">
+        <h2 class="formacion-titulo">Formación & Certificaciones</h2>
+        <p class="formacion-subtitulo">Mi journey de aprendizaje continuo en tecnología</p>
+
+        <div class="formacion-grid">
+
+            <!-- Formación Académica -->
+            <div class="formacion-categoria">
+                <h3 class="categoria-titulo">
+                    <span class="categoria-icono">🎓</span>
+                    Formación Académica
+                </h3>
+
+
+                <!--Formacion 1-->
+                <div class="formacion-item">
+                    <div class="formacion-header">
+                        <h4 class="formacion-nombre">Ingeniería en Sistemas Computacionales</h4>
+                        <span class="formacion-fecha">2019 - 2023</span>
+                    </div>
+                    <div class="formacion-institucion-escuela">
+                        <span class="institucion-nombre">Instituto Politécnico Nacional</span>
+                        <span class="institucion-unidad">Unidad Profesional Interdisciplinaria de Ingeniería, Campus
+                            Zacatecas</span>
+                    </div>
+                    <p class="formacion-descripcion">
+                        Formación en fundamentos de ingeniería de software, algoritmos,
+                        bases de datos y arquitectura de sistemas.
+                    </p>
+                    <div class="formacion-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Redes</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Certificaciones Técnicas -->
+            <div class="formacion-categoria">
+                <h3 class="categoria-titulo">
+                    <span class="categoria-icono">📜</span>
+                    Certificaciones Técnicas
+                </h3>
+
+                <div id="certificaciones-container">
+                    <!-- Las 3 certificaciones destacadas se cargan automáticamente desde JavaScript -->
+                    <div class="estado-carga-certificaciones">
+                        <p>Cargando certificaciones destacadas...</p>
+                    </div>
+                </div>
+
+                <a href="certificaciones.html" class="ver-todas">
+                    <span class="btn-texto">Ver todas las certificaciones</span>
+                    <span class="btn-icono">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <!-- En Progreso -->
+            <div class="formacion-categoria">
+                <h3 class="categoria-titulo">
+                    <span class="categoria-icono">🚀</span>
+                    En Progreso
+                </h3>
+
+                <div class="progreso-item">
+                    <div class="progreso-header">
+                        <h4 class="progreso-nombre">Flutter - Móvil: De cero a experto</h4>
+                        <span class="progreso-estado">6% completado</span>
+                    </div>
+                    <div class="progreso-bar">
+                        <div class="progreso-fill" style="width: 6%"></div>
+                    </div>
+                    <p class="progreso-descripcion">
+                        Integración avanzada con Firebase, autenticación, Cloud Firestore,
+                        y despliegue en production.
+                    </p>
+                </div>
+
+                <div class="progreso-item">
+                    <div class="progreso-header">
+                        <h4 class="progreso-nombre">Emprendimiento, Agilidad y Protagonismo Profesional G9 - ONE</h4>
+                        <span class="progreso-estado">18% completado</span>
+                    </div>
+                    <div class="progreso-bar">
+                        <div class="progreso-fill" style="width: 18%"></div>
+                    </div>
+                    <p class="progreso-descripcion">
+                        Principios de diseño para crear interfaces intuitivas y experiencias
+                        de usuario excepcionales.
+                    </p>
+                </div>
+
+
+                <div class="progreso-item">
+                    <div class="progreso-header">
+                        <h4 class="progreso-nombre">UI/UX Design for Developers</h4>
+                        <span class="progreso-estado">40% completado</span>
+                    </div>
+                    <div class="progreso-bar">
+                        <div class="progreso-fill" style="width: 40%"></div>
+                    </div>
+                    <p class="progreso-descripcion">
+                        Principios de diseño para crear interfaces intuitivas y experiencias
+                        de usuario excepcionales.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Sección Habilidades -->
+    <section id="habilidades" class="habilidades">
+        <h2 class="habilidades-titulo">Habilidades & Tecnologías</h2>
+        <p class="habilidades-subtitulo">Mi stack técnico y áreas de especialización en desarrollo</p>
+
+        <div class="habilidades-grid">
+
+            <!-- Desarrollo Móvil -->
+            <div class="habilidad-categoria">
+                <div class="categoria-header">
+                    <h3 class="categoria-nombre">
+                        <i class="categoria-icono fas fa-mobile-alt"></i>
+                        Desarrollo Móvil
+                    </h3>
+                    <span class="categoria-nivel">Especialización</span>
+                </div>
+                <div class="habilidades-lista">
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-feather"></i>
+                        <span class="habilidad-nombre">Flutter</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-code"></i>
+                        <span class="habilidad-nombre">Dart</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-fire"></i>
+                        <span class="habilidad-nombre">Firebase</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-puzzle-piece"></i>
+                        <span class="habilidad-nombre">Widgets</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Science -->
+            <div class="habilidad-categoria">
+                <div class="categoria-header">
+                    <h3 class="categoria-nombre">
+                        <i class="categoria-icono fas fa-chart-bar"></i>
+                        Data Science
+                    </h3>
+                    <span class="categoria-nivel cursando">En formación</span>
+                </div>
+                <div class="habilidades-lista">
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fab fa-python"></i>
+                        <span class="habilidad-nombre">Python</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-table"></i>
+                        <span class="habilidad-nombre">Pandas</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-chart-line"></i>
+                        <span class="habilidad-nombre">NumPy</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-search"></i>
+                        <span class="habilidad-nombre">Análisis de Datos</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-database"></i>
+                        <span class="habilidad-nombre">SQL</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-robot"></i>
+                        <span class="habilidad-nombre">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lenguajes de Programación -->
+            <div class="habilidad-categoria">
+                <div class="categoria-header">
+                    <h3 class="categoria-nombre">
+                        <i class="categoria-icono fas fa-code"></i>
+                        Lenguajes
+                    </h3>
+                </div>
+                <div class="habilidades-lista">
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-code"></i>
+                        <span class="habilidad-nombre">Dart</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fab fa-java"></i>
+                        <span class="habilidad-nombre">Java</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fab fa-python"></i>
+                        <span class="habilidad-nombre">Python</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fab fa-js-square"></i>
+                        <span class="habilidad-nombre">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Herramientas & Plataformas -->
+            <div class="habilidad-categoria">
+                <div class="categoria-header">
+                    <h3 class="categoria-nombre">
+                        <i class="categoria-icono fas fa-tools"></i>
+                        Herramientas
+                    </h3>
+                </div>
+                <div class="habilidades-lista">
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fab fa-git-alt"></i>
+                        <span class="habilidad-nombre">Git</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fab fa-github"></i>
+                        <span class="habilidad-nombre">GitHub</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-code"></i>
+                        <span class="habilidad-nombre">VS Code</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-laptop-code"></i>
+                        <span class="habilidad-nombre">Jupyter</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="habilidad-categoria">
+                <div class="categoria-header">
+                    <h3 class="categoria-nombre">
+                        <i class="categoria-icono fas fa-star"></i>
+                        Soft Skills
+                    </h3>
+                </div>
+                <div class="habilidades-lista soft-skills">
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-bullseye"></i>
+                        <span class="habilidad-nombre">Resolución de Problemas</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-bolt"></i>
+                        <span class="habilidad-nombre">Aprendizaje Rápido</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-users"></i>
+                        <span class="habilidad-nombre">Trabajo en Equipo</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-comments"></i>
+                        <span class="habilidad-nombre">Comunicación</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-search-plus"></i>
+                        <span class="habilidad-nombre">Atención al Detalle</span>
+                    </div>
+
+                    <div class="habilidad-item">
+                        <i class="habilidad-icono fas fa-clock"></i>
+                        <span class="habilidad-nombre">Gestión del Tiempo</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto">
+        <div class="contacto-contenedor">
+            <div class="contacto-header">
+                <h2 class="contacto-titulo">Hablemos</h2>
+                <p class="contacto-subtitulo">¿Tienes un proyecto en mente? Hablemos y hagámoslo realidad.</p>
+            </div>
+
+            <div class="contacto-grid">
+
+                <!-- Información de Contacto -->
+                <div class="contacto-info">
+                    <h3 class="info-titulo">Conectemos</h3>
+                    <p class="info-descripcion">
+                        Estoy siempre abierta a nuevas oportunidades y colaboraciones.
+                        No dudes en contactarme para hablar sobre tecnología, proyectos o simplemente saludar.
+                    </p>
+
+                    <div class="info-items">
+                        <!-- Email -->
+                        <div class="info-item">
+                            <div class="info-icono">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </div>
+                            <div class="info-contenido">
+                                <span class="info-label">Email</span>
+                                <a href="mailto:tu.email@ejemplo.com" class="info-valor">veronicaacuna0327@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- LinkedIn -->
+                        <div class="info-item">
+                            <div class="info-icono">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                            </div>
+                            <div class="info-contenido">
+                                <span class="info-label">LinkedIn</span>
+                                <a href="https://linkedin.com/in/verónica-acuña" class="info-valor"
+                                    target="_blank">Verónica Acuña</a>
+                            </div>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="info-item">
+                            <div class="info-icono">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </div>
+                            <div class="info-contenido">
+                                <span class="info-label">GitHub</span>
+                                <a href="https://github.com/V-ac" class="info-valor" target="_blank">V-ac</a>
+                            </div>
+                        </div>
+
+                        <!-- Ubicación -->
+                        <div class="info-item">
+                            <div class="info-icono">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                </svg>
+                            </div>
+                            <div class="info-contenido">
+                                <span class="info-label">Ubicación</span>
+                                <span class="info-valor">Zacatecas, México</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enlaces rápidos -->
+                    <div class="contacto-enlaces">
+                        <a href="./assets/tu-cv.pdf" class="btn-cv" download>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                            </svg>
+                            Descargar CV
+                        </a>
+                        <div class="social-links">
+                            <a href="https://github.com/V-ac" class="social-link" aria-label="GitHub">
+                                <img src="./asset/github.png" alt="GitHub">
+                            </a>
+                            <a href="https://linkedin.com/in/verónica-acuña" class="social-link" aria-label="LinkedIn">
+                                <img src="./asset/linkedin.png" alt="LinkedIn">
+                            </a>
+                            <a href="mailto:tu.email@ejemplo.com" class="social-link" aria-label="Email">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <div class="contacto-formulario">
+                    <form class="formulario" id="form-contacto">
+                        <div class="form-grupo">
+                            <label for="nombre" class="form-label">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" class="form-input" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="asunto" class="form-label">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" class="form-input"
+                                placeholder="Ej: Oportunidad de colaboración">
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="mensaje" class="form-label">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" class="form-textarea" rows="5"
+                                placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">
+                            <span class="btn-texto">Enviar mensaje</span>
+                            <span class="btn-cargando" style="display: none;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+                                        opacity=".5" />
+                                    <path d="M20 12a8 8 0 0 1-8 8V4a8 8 0 0 1 8 8z" />
+                                </svg>
+                                Enviando...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modal para detalles de proyectos -->
+    <div id="modal-proyecto" class="modal">
+        <div class="modal-contenido">
+            <button class="modal-cerrar" id="modalCerrar">&times;</button>
+            <div class="modal-header">
+                <img id="modalImagen" src="" alt="" class="modal-imagen">
+                <div class="modal-info">
+                    <h2 id="modalTitulo"></h2>
+                    <div id="modalTecnologias" class="modal-tecnologias"></div>
+                    <span id="modalAño" class="modal-año"></span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div id="modalDescripcion" class="modal-descripcion"></div>
+                <div class="modal-acciones">
+                    <div id="modalDemo" class="modal-demo"></div>
+                    <div id="modalCodigo" class="modal-codigo"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+        <div class="footer-contenido">
+            <p class="footer-texto">Hecho con 💙 por Verónica Acuña - 2025</p>
+            <div class="footer-enlaces">
+                <a href="#inicio" class="footer-link">Inicio</a>
+                <a href="#proyectos" class="footer-link">Proyectos</a>
+                <a href="#formacion" class="footer-link">Formación</a>
+                <a href="#habilidades" class="footer-link">Habilidades</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Menú hamburguesa - VERSIÓN CORREGIDA
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+            const navEnlaces = document.querySelector('.nav-enlaces');
+
+            console.log('Menu hamburguesa:', menuHamburguesa);
+            console.log('Nav enlaces:', navEnlaces);
+
+            if (menuHamburguesa && navEnlaces) {
+                menuHamburguesa.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    console.log('Click en hamburguesa');
+
+                    // Toggle clases
+                    menuHamburguesa.classList.toggle('active');
+                    navEnlaces.classList.toggle('active');
+
+                    // Prevenir scroll cuando el menú está abierto
+                    if (navEnlaces.classList.contains('active')) {
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                // Cerrar menú al hacer clic en un enlace
+                document.querySelectorAll('.nav-enlaces a').forEach(link => {
+                    link.addEventListener('click', function () {
+                        console.log('Click en enlace, cerrando menú');
+                        menuHamburguesa.classList.remove('active');
+                        navEnlaces.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+
+                // Cerrar menú al hacer clic fuera de él
+                document.addEventListener('click', function (e) {
+                    if (!e.target.closest('.navegacion') &&
+                        navEnlaces.classList.contains('active')) {
+                        console.log('Click fuera, cerrando menú');
+                        menuHamburguesa.classList.remove('active');
+                        navEnlaces.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                // Cerrar menú con tecla ESC
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && navEnlaces.classList.contains('active')) {
+                        console.log('Tecla ESC, cerrando menú');
+                        menuHamburguesa.classList.remove('active');
+                        navEnlaces.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            } else {
+                console.error('No se encontraron elementos del menú hamburguesa');
+            }
+        });
+    </script>
+    <!-- En tu index.html, antes de cerrar el body -->
+    <script src="./js/certificaciones-data.js"></script>
+    <script src="./js/certificaciones.js"></script>
+    <script src="./js/projects-data.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+
+
+</html>
