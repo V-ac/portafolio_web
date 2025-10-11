@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 /* ===== VARIABLES Y RESET ===== */
 :root {
@@ -183,6 +182,14 @@ body {
 }
 
 /* ===== SECCIÓN PROYECTOS ===== */
+.proyectos {
+    display: flex;
+    align-items: center;
+    padding: 7% 15%;
+    justify-content: space-between;
+    gap: 80px;
+}
+
 .proyectos-titulo {
     text-align: left;
     font-size: 2.5rem;
@@ -622,55 +629,24 @@ body {
     color: #0a1f3d;
 }
 
+/* 🔥 CORRECCIÓN: Texto visible en modal "no disponible" */
 .modal-demo.no-disponible,
 .modal-codigo.no-disponible {
     background: #FFF3CD;
     color: #856404 !important;
+    /* Forzar color visible */
     border: 1px solid #FFEAA7;
     font-weight: 600;
     font-size: 0.9rem;
 }
 
+/* Asegurar que el texto sea visible */
 .modal-demo.no-disponible .no-disponible-texto,
 .modal-codigo.no-disponible .no-disponible-texto {
     color: #856404 !important;
     font-size: 0.9rem;
     font-weight: 600;
     margin: 0;
-}
-
-.modal-demo .enlace-demo,
-.modal-codigo .enlace-codigo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.modal-demo .enlace-demo {
-    background: #0F2B5A;
-    color: white;
-}
-
-.modal-demo .enlace-demo:hover {
-    background: #177A73;
-    transform: translateY(-2px);
-}
-
-.modal-codigo .enlace-codigo {
-    background: #28A745;
-    color: white;
-}
-
-.modal-codigo .enlace-codigo:hover {
-    background: #218838;
-    transform: translateY(-2px);
 }
 
 /* ===== SECCIÓN FORMACIÓN ===== */
@@ -721,6 +697,7 @@ body {
     font-size: 1.6rem;
 }
 
+/* Estilos mejorados para formación */
 .formacion-institucion-escuela {
     display: flex;
     flex-direction: column;
@@ -783,6 +760,13 @@ body {
     font-size: 0.8rem;
     font-weight: 600;
     white-space: nowrap;
+}
+
+.formacion-institucion {
+    color: #20C997;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
 }
 
 .formacion-descripcion {
@@ -912,9 +896,9 @@ body {
     line-height: 1.4;
 }
 
-/* ===== SECCIÓN HABILIDADES CON ICONOS REALES ===== */
+/* ===== SECCIÓN HABILIDADES ===== */
 .habilidades {
-    padding: 5% 15%;
+    padding: 0% 15%;
     margin: 0 auto;
 }
 
@@ -936,8 +920,8 @@ body {
 
 .habilidades-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 3rem;
     margin: 0 auto;
 }
 
@@ -948,7 +932,6 @@ body {
     box-shadow: 0 10px 30px rgba(15, 43, 90, 0.08);
     border: 1px solid rgba(15, 43, 90, 0.05);
     transition: all 0.3s ease;
-    position: relative;
 }
 
 .habilidad-categoria:hover {
@@ -975,9 +958,7 @@ body {
 }
 
 .categoria-icono {
-    font-size: 1.3rem;
-    width: 24px;
-    color: var(--color-primario-azul);
+    font-size: 1.5rem;
 }
 
 .categoria-nivel {
@@ -989,33 +970,96 @@ body {
     font-weight: 600;
 }
 
-.categoria-nivel.cursando {
-    background: #FFC107;
-    color: #0F2B5A;
-    animation: pulse 2s infinite;
+.habilidades-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4);
-    }
+.habilidad-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
-    70% {
-        box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
+.habilidad-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.habilidad-nombre {
+    color: #0F2B5A;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.habilidad-porcentaje {
+    color: #6C757D;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.habilidad-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(15, 43, 90, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.habilidad-progreso {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+    position: relative;
+}
+
+.habilidad-progreso[data-nivel="avanzado"] {
+    background: linear-gradient(90deg, #20C997, #177A73);
+}
+
+.habilidad-progreso[data-nivel="intermedio"] {
+    background: linear-gradient(90deg, #177A73, #0F2B5A);
+}
+
+.habilidad-progreso[data-nivel="basico"] {
+    background: linear-gradient(90deg, #0F2B5A, #6C757D);
+}
+
+.habilidad-progreso[data-nivel="principiante"] {
+    background: #6C757D;
+}
+
+.habilidad-progreso::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%);
     }
 
     100% {
-        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+        transform: translateX(100%);
     }
 }
 
-.habilidades-lista {
+.soft-skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
-.habilidad-item {
+.soft-skill-item {
     display: flex;
     align-items: center;
     gap: 0.7rem;
@@ -1026,21 +1070,16 @@ body {
     transition: all 0.3s ease;
 }
 
-.habilidad-item:hover {
+.soft-skill-item:hover {
     background: rgba(23, 122, 115, 0.1);
     transform: translateX(5px);
 }
 
-.habilidad-icono {
+.soft-skill-icono {
     font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 24px;
-    color: var(--color-primario-azul);
 }
 
-.habilidad-nombre {
+.soft-skill-nombre {
     color: #0F2B5A;
     font-weight: 600;
     font-size: 0.9rem;
@@ -1125,6 +1164,72 @@ body {
     background: rgba(255, 255, 255, 0.15);
     transform: translateX(5px);
 }
+
+/* Estilos para badges de plataforma */
+.plataforma-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+/* Estados de enlaces en modal */
+.modal-demo.no-disponible,
+.modal-codigo.no-disponible {
+    background: #FFF3CD;
+    border: 1px solid #FFEAA7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-disponible-texto {
+    color: #856404 !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* Enlaces normales en modal */
+.modal-demo .enlace-demo,
+.modal-codigo .enlace-codigo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.modal-demo .enlace-demo {
+    background: #0F2B5A;
+    color: white;
+}
+
+.modal-demo .enlace-demo:hover {
+    background: #177A73;
+    transform: translateY(-2px);
+}
+
+.modal-codigo .enlace-codigo {
+    background: #28A745;
+    color: white;
+}
+
+.modal-codigo .enlace-codigo:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+
 
 .info-icono {
     padding: 0.5rem;
@@ -1416,20 +1521,15 @@ body {
         max-width: 350px;
     }
 
-    .proyectos-titulo,
-    .proyectos-subtitulo,
-    .proyectos-grid {
-        padding-left: 5%;
-        padding-right: 5%;
+    .proyectos {
+        padding: 4rem 5%;
     }
 
     .proyectos-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .formacion,
-    .habilidades,
-    .contacto {
+    .formacion {
         padding: 4rem 5%;
     }
 
@@ -1437,8 +1537,16 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .habilidades {
+        padding: 4rem 5%;
+    }
+
     .habilidades-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacto {
+        padding: 4rem 5%;
     }
 }
 
@@ -1465,11 +1573,8 @@ body {
         max-width: 280px;
     }
 
-    .proyectos-titulo,
-    .proyectos-subtitulo,
-    .proyectos-grid {
-        padding-left: 5%;
-        padding-right: 5%;
+    .proyectos {
+        padding: 3rem 5%;
     }
 
     .proyectos-grid {
@@ -1487,7 +1592,7 @@ body {
 
     .proyectos-accion {
         margin-top: 2rem;
-        padding: 1rem 5%;
+        padding: 1rem 0;
     }
 
     .btn-proyectos {
@@ -1496,9 +1601,7 @@ body {
         padding: 0.9rem 1.5rem;
     }
 
-    .formacion,
-    .habilidades,
-    .contacto {
+    .formacion {
         padding: 3rem 5%;
     }
 
@@ -1514,16 +1617,24 @@ body {
         flex-direction: column;
     }
 
+    .habilidades {
+        padding: 3rem 5%;
+    }
+
     .habilidades-grid {
         grid-template-columns: 1fr;
     }
 
-    .habilidades-lista {
+    .soft-skills {
         grid-template-columns: 1fr;
     }
 
     .categoria-header {
         flex-direction: column;
+    }
+
+    .contacto {
+        padding: 3rem 5%;
     }
 
     .contacto-grid {
@@ -1627,11 +1738,11 @@ body {
         font-size: 1rem;
     }
 
-    .habilidad-item {
+    .soft-skill-item {
         padding: 0.5rem;
     }
 
-    .habilidad-nombre {
+    .soft-skill-nombre {
         font-size: 0.8rem;
     }
 
@@ -1696,6 +1807,360 @@ body {
         flex-direction: column;
     }
 }
+
+/* Estilos para las nuevas descripciones de proyectos */
+.proyecto-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(23, 122, 115, 0.2);
+}
+
+.proyecto-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.proyecto-badge.proyecto-final {
+    background: linear-gradient(135deg, #28ADBF, #177A73);
+    color: white;
+}
+
+.proyecto-badge.servicio-social {
+    background: linear-gradient(135deg, #3AC66E, #28ADBF);
+    color: white;
+}
+
+.proyecto-contexto {
+    background: rgba(23, 122, 115, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #177A73;
+    margin: 1rem 0;
+}
+
+.proyecto-impacto {
+    background: linear-gradient(135deg, rgba(15, 43, 90, 0.05), rgba(23, 122, 115, 0.05));
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(23, 122, 115, 0.1);
+}
+
+.caracteristicas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.caracteristica-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border: 1px solid rgba(15, 43, 90, 0.1);
+}
+
+.caracteristica-icono {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.tech-categoria {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(15, 43, 90, 0.1);
+}
+
+.tech-categoria h5 {
+    color: #0F2B5A;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.habilidades-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+
+.habilidad-badge {
+    background: linear-gradient(135deg, #0F2B5A, #177A73);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.proyecto-logros ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.proyecto-logros li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(15, 43, 90, 0.1);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.proyecto-logros li:before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+}
+
+.proyecto-disponibilidad {
+    background: linear-gradient(135deg, #3AC66E, #28ADBF);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .caracteristicas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .habilidades-list {
+        justify-content: center;
+    }
+}
+
+/* ===== SECCIÓN HABILIDADES CON ICONOS REALES ===== */
+.habilidades {
+    padding: 5% 15%;
+    margin: 0 auto;
+}
+
+.habilidades-titulo {
+    text-align: left;
+    font-size: 2.5rem;
+    color: var(--color-letra);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.habilidades-subtitulo {
+    text-align: left;
+    color: var(--color-letra);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    font-weight: 200;
+}
+
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.habilidad-categoria {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(15, 43, 90, 0.08);
+    border: 1px solid rgba(15, 43, 90, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.habilidad-categoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(15, 43, 90, 0.12);
+}
+
+.categoria-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(23, 122, 115, 0.1);
+}
+
+.categoria-nombre {
+    color: #0F2B5A;
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.categoria-icono {
+    font-size: 1.3rem;
+    width: 24px;
+    color: #177A73;
+}
+
+.categoria-nivel {
+    background: #20C997;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Estado "En formación" para Data Science */
+.categoria-nivel.cursando {
+    background: #FFC107;
+    color: #0F2B5A;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+    }
+}
+
+.habilidades-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.habilidad-item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.8rem;
+    background: rgba(23, 122, 115, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(23, 122, 115, 0.1);
+    transition: all 0.3s ease;
+}
+
+.habilidad-item:hover {
+    background: rgba(23, 122, 115, 0.1);
+    transform: translateX(5px);
+}
+
+.habilidad-icono {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    color: #177A73;
+}
+
+.habilidad-nombre {
+    color: #0F2B5A;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Colores específicos para algunas tecnologías */
+.fa-flutter {
+    color: #02569B;
+}
+
+.fa-dart {
+    color: #0175C2;
+}
+
+.fa-python {
+    color: #3776AB;
+}
+
+.fa-java {
+    color: #007396;
+}
+
+.fa-js-square {
+    color: #F7DF1E;
+}
+
+.fa-git-alt {
+    color: #F05032;
+}
+
+.fa-github {
+    color: #181717;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 767px) {
+    .habilidades {
+        padding: 3rem 5%;
+    }
+
+    .habilidades-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .habilidades-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .categoria-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .habilidades-titulo {
+        font-size: 1.8rem;
+    }
+
+    .habilidad-categoria {
+        padding: 1.5rem;
+    }
+
+    .categoria-nombre {
+        font-size: 1.1rem;
+    }
+
+    .habilidad-item {
+        padding: 0.6rem;
+    }
+
+    .habilidad-nombre {
+        font-size: 0.85rem;
+    }
+
+    .habilidad-icono {
+        font-size: 1rem;
+    }
+}
+
 
 /* Responsive 
 @media (max-width: 1200px) {
