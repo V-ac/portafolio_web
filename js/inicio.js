@@ -32,7 +32,7 @@ const FONDOS = [
 ];
 
 function leer(clave) { try { return localStorage.getItem(clave); } catch { return null; } }
-function guardar(clave, valor) { try { localStorage.setItem(clave, valor); } catch {} }
+function guardar(clave, valor) { try { localStorage.setItem(clave, valor); } catch { } }
 
 function iniciarEstilo() {
   const probando = new URLSearchParams(location.search).has("probar");
@@ -44,7 +44,7 @@ function iniciarEstilo() {
   let fondo = fondoValido(leer("va-fondo")) ? leer("va-fondo") : ESTILO.fondo;
 
   const aplicarPortada = (v) => {
-    portada = portadaValida(v) ? v : "arco";
+    portada = portadaValida(v) ? v : "gafete";//era arco
     document.body.dataset.portada = portada;
     document.querySelectorAll(".hero").forEach((h) => {
       const activa = h.dataset.diseno === portada;
@@ -219,7 +219,7 @@ function abrirOrden(id) {
         ${hayFotos ? `<img id="galImg" src="" alt="">
           <button type="button" class="galeria-flecha izq" data-mover="-1" aria-label="Captura anterior">${ICONO_FLECHA_IZQ}</button>
           <button type="button" class="galeria-flecha der" data-mover="1" aria-label="Captura siguiente">${ICONO_FLECHA_DER}</button>`
-        : ILUSTRACIONES[p.ilustracion] || ""}
+      : ILUSTRACIONES[p.ilustracion] || ""}
       </div>
       ${hayFotos ? `<div class="galeria-pie"><span id="galTexto"></span><span id="galCuenta"></span></div>
       <div class="galeria-tira">
