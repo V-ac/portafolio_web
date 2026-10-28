@@ -278,7 +278,7 @@ const PROYECTOS = [
       ["asset/proyectos/crack-the-code/gano.webp", "Pantalla de victoria"],
       ["asset/proyectos/crack-the-code/perdio.webp", "Pantalla de derrota"],
     ],
-    demo: { url: "https://mrtako.itch.io/prueba?secret=BzFQLb6KD3Lxx75TD7xyVrbl8U", texto: "Jugar en itch.io" },
+    demo: { url: "https://mrtako.itch.io/crack-the-code?secret=GkodTfa17DIpNbercGvicHUdU4", texto: "Jugar en itch.io" },
     codigo: { url: "" },
   },
 ];
@@ -287,18 +287,30 @@ const PROYECTOS = [
    BITÁCORA (trayectoria), de lo más antiguo a lo más reciente
    --------------------------------------------------------------------- */
 const TRAYECTORIA = [
-  { cuando: "2019 – 2023", titulo: "Ingeniería en Sistemas Computacionales", lugar: "IPN · UPIIZ, Zacatecas",
-    texto: "Ingeniería de software, algoritmos, bases de datos, redes y arquitectura de sistemas." },
-  { cuando: "2023", titulo: "Servicio social en el CIMAT", lugar: "Crack the Code",
-    texto: "Mi primer juego publicado: un reto de lógica hecho en Unity." },
-  { cuando: "2023", titulo: "Titulación", lugar: "Math Adventure",
-    texto: "Videojuego para Android que enseña a trazar números con cuentos animados." },
-  { cuando: "2025", titulo: "Oracle Next Education G9", lugar: "Alura Latam + Oracle",
-    texto: "Formación en programación y desarrollo personal: JavaScript, HTML y CSS, Git e IA generativa." },
-  { cuando: "Hoy", titulo: "Soporte técnico CONTPAQi", lugar: "Soluciones Empresariales C&T · Zacatecas y Aguascalientes",
-    texto: "Atiendo clientes por soporte remoto: instalaciones, actualizaciones y dudas. Y construyo herramientas para que el equipo trabaje mejor." },
-  { cuando: "Hoy", titulo: "Desarrollo móvil con Flutter", lugar: "Aprendiendo",
-    texto: "Cancionero del Coro y un armario virtual donde se pueden encimar prendas." },
+  {
+    cuando: "2019 – 2023", titulo: "Ingeniería en Sistemas Computacionales", lugar: "IPN · UPIIZ, Zacatecas",
+    texto: "Ingeniería de software, algoritmos, bases de datos, redes y arquitectura de sistemas."
+  },
+  {
+    cuando: "2023", titulo: "Servicio social en el CIMAT", lugar: "Crack the Code",
+    texto: "Mi primer juego publicado: un reto de lógica hecho en Unity."
+  },
+  {
+    cuando: "2023", titulo: "Titulación", lugar: "Math Adventure",
+    texto: "Videojuego para Android que enseña a trazar números con cuentos animados."
+  },
+  {
+    cuando: "2025", titulo: "Oracle Next Education G9", lugar: "Alura Latam + Oracle",
+    texto: "Formación en programación y desarrollo personal: JavaScript, HTML y CSS, Git e IA generativa."
+  },
+  {
+    cuando: "Hoy", titulo: "Soporte técnico CONTPAQi", lugar: "Soluciones Empresariales C&T · Zacatecas y Aguascalientes",
+    texto: "Atiendo clientes por soporte remoto: instalaciones, actualizaciones y dudas. Y construyo herramientas para que el equipo trabaje mejor."
+  },
+  {
+    cuando: "Hoy", titulo: "Desarrollo móvil con Flutter", lugar: "Aprendiendo",
+    texto: "Cancionero del Coro y un armario virtual donde se pueden encimar prendas."
+  },
 ];
 
 /* ---------------------------------------------------------------------
@@ -329,18 +341,24 @@ const HABILIDADES = [
    - destacada: true → aparece en la página de inicio
    --------------------------------------------------------------------- */
 const CERTIFICACIONES = [
-  { titulo: "Principiante en Programación G9 – ONE", tipo: "formacion", area: "tecnica", horas: 78, cursos: 10, fecha: "2025",
+  {
+    titulo: "Principiante en Programación G9 – ONE", tipo: "formacion", area: "tecnica", horas: 78, cursos: 10, fecha: "2025",
     imagen: "asset/certificaciones/principiante-programacion-g9.webp", destacada: true,
     url: "https://app.aluracursos.com/degree/certificate/bbae76af-2887-41c3-9c6a-2821bf80e520?lang",
-    temas: ["Lógica de programación", "HTML y CSS", "JavaScript", "Git y GitHub", "IA generativa"] },
-  { titulo: "Desarrollo Personal G9 – ONE", tipo: "formacion", area: "personal", horas: 43, cursos: 5, fecha: "2025",
+    temas: ["Lógica de programación", "HTML y CSS", "JavaScript", "Git y GitHub", "IA generativa"]
+  },
+  {
+    titulo: "Desarrollo Personal G9 – ONE", tipo: "formacion", area: "personal", horas: 43, cursos: 5, fecha: "2025",
     imagen: "asset/certificaciones/desarrollo-personal-g9.webp", destacada: true,
     url: "https://app.aluracursos.com/degree/certificate/12227bc4-b631-4719-a764-62a3f5e142f6?lang=es",
-    temas: ["Marca personal", "LinkedIn", "Hábitos y metas", "Aprendizaje con IA"] },
-  { titulo: "Lógica de programación con JavaScript", tipo: "formacion", area: "tecnica", horas: 24, cursos: 3, fecha: "2025",
+    temas: ["Marca personal", "LinkedIn", "Hábitos y metas", "Aprendizaje con IA"]
+  },
+  {
+    titulo: "Lógica de programación con JavaScript", tipo: "formacion", area: "tecnica", horas: 24, cursos: 3, fecha: "2025",
     imagen: "asset/certificaciones/logica-javascript-formacion.webp", destacada: true,
     url: "https://app.aluracursos.com/degree/certificate/b09d6cea-24c2-429d-9211-f932b3aa609a?lang",
-    temas: ["Algoritmos", "Estructuras de datos", "Git y GitHub"] },
+    temas: ["Algoritmos", "Estructuras de datos", "Git y GitHub"]
+  },
 
   { titulo: "Lógica de programación: sumérgete en la programación con JavaScript", tipo: "curso", area: "tecnica", fecha: "2025", imagen: "asset/certificaciones/logica-javascript.webp" },
   { titulo: "Practicando lógica de programación: Challenge Amigo Secreto", tipo: "curso", area: "tecnica", horas: 10, fecha: "2025", imagen: "asset/certificaciones/challenge-amigo-secreto.webp" },
